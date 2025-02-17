@@ -40,7 +40,7 @@ export default class Tiles {
 				this.ctx.fillStyle = "#f2bd28";
 				break;
 			default:
-				this.ctx.fillStyle = "#afafaf";
+				this.ctx.fillStyle = "#cfc0af";
 		}
 	}
 
@@ -59,20 +59,19 @@ export default class Tiles {
 
         this.ctx.beginPath();
         this.ctx.moveTo(sizeX + posX - 5, sizeY + posY);
-        this.ctx.arcTo(0 + posX, sizeY + posY, 0 + posX, 0 + posY, 5);
-        this.ctx.arcTo(0 + posX, 0 + posY, sizeX + posX, 0 + posY, 5);
-        this.ctx.arcTo(sizeX + posX, 0 + posY, sizeX + posX, sizeY + posY, 5);
-        this.ctx.arcTo(sizeX + posX, sizeY + posY, 0 + posX, sizeY + posY, 5);
+        this.ctx.arcTo(posX, sizeY + posY, posX, posY, 5);
+        this.ctx.arcTo(posX, posY, sizeX + posX, posY, 5);
+        this.ctx.arcTo(sizeX + posX, posY, sizeX + posX, sizeY + posY, 5);
+        this.ctx.arcTo(sizeX + posX, sizeY + posY, posX, sizeY + posY, 5);
         this.ctx.fill();
-        this.ctx.stroke();
 
 
-		this.ctx.font = "bold 32px Sans";
+		this.ctx.font = "400 32px Arial";
 		this.ctx.textAlign = "center";
 		this.ctx.textBaseline = "middle";
 		this.ctx.fillStyle = "#222";
 
-		this.ctx.fillText(value, x + 37.5, y + 37.5);
+		this.ctx.fillText(value, x + 37.5, y + 42.5);
 		this.setPos(x, y);
 	}
 
@@ -90,10 +89,10 @@ export default class Tiles {
 
         this.ctx.beginPath();
         this.ctx.moveTo(sizeX + posX - 5, sizeY + posY);
-        this.ctx.arcTo(0 + posX, sizeY + posY, 0 + posX, 0 + posY, 5);
-        this.ctx.arcTo(0 + posX, 0 + posY, sizeX + posX, 0 + posY, 5);
-        this.ctx.arcTo(sizeX + posX, 0 + posY, sizeX + posX, sizeY + posY, 5);
-        this.ctx.arcTo(sizeX + posX, sizeY + posY, 0 + posX, sizeY + posY, 5);
+        this.ctx.arcTo(posX, sizeY + posY, posX, posY, 5);
+        this.ctx.arcTo(posX, posY, sizeX + posX, posY, 5);
+        this.ctx.arcTo(sizeX + posX, posY, sizeX + posX, sizeY + posY, 5);
+        this.ctx.arcTo(sizeX + posX, sizeY + posY, posX, sizeY + posY, 5);
         this.ctx.fill();
 
 

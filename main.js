@@ -6,11 +6,24 @@ import MoveTile from "./classes/MoveTile.js";
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 
-canvas.width  = 320 + 4;
-canvas.height = 80 + 320;
+canvas.width  = 400;
+canvas.height = 485;
 
 ctx.fillStyle = "#cfc0af";
-ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+let sizeX = 360;
+let sizeY = 360;
+let posX = (canvas.width - 360) / 2;
+let posY = (canvas.height - 360) - 20;
+
+ctx.beginPath();
+ctx.moveTo(sizeX + posX - 5, sizeY + posY);
+ctx.arcTo(posX, sizeY + posY, posX, posY, 5);
+ctx.arcTo(posX, posY, sizeX + posX, posY, 5);
+ctx.arcTo(sizeX + posX, posY, sizeX + posX, sizeY + posY, 5);
+ctx.arcTo(sizeX + posX, sizeY + posY, posX, sizeY + posY, 5)
+ctx.fill();
+ctx.stroke();
 
 let grid = new Grid(ctx);
 let tile = new Tiles(ctx, grid);
